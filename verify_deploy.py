@@ -2,8 +2,8 @@
 """Verify a deployed HDFC FAQ assistant over HTTP.
 
 Usage:
-    python verify_deploy.py
-    python verify_deploy.py --url https://rohithdacharla-hdfc-mf-faq.hf.space
+    python verify_deploy.py --url https://hdfc-mf-faq-376o.onrender.com
+    python verify_deploy.py --url https://<user>-hdfc-mf-faq.hf.space
 """
 
 from __future__ import annotations
