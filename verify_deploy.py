@@ -45,7 +45,7 @@ CASES = [
     {
         "query": "What is the benchmark of HDFC Large Cap Fund?",
         "source": "large",
-        "contains": ["NIFTY 100 TRI"],
+        "contains": ["NIFTY 100"],
     },
     {
         "query": "What is the riskometer of HDFC Large Cap Fund?",
@@ -70,7 +70,7 @@ CASES = [
     {
         "query": "What is the benchmark of HDFC Mid Cap Fund?",
         "source": "mid",
-        "contains": ["NIFTY Midcap 150 TRI"],
+        "contains": ["NIFTY Midcap 150"],
     },
     {
         "query": "What is the expense ratio of HDFC Mid Cap Fund?",

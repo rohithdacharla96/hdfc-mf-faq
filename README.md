@@ -2,6 +2,10 @@
 
 Facts-only RAG prototype that answers questions about five HDFC Mutual Fund pages on Groww. It never gives investment advice, never compares funds or predicts returns, and rejects personal information.
 
+**Live demo:** https://hdfc-mf-faq-376o.onrender.com
+
+> Free Render instances sleep after 15 minutes of inactivity; the first request after that may take 30–60 seconds to wake the app.
+
 ## Scope
 
 The corpus is fixed at these five official Groww pages. The scraper never follows, queues, or fetches links found inside them.

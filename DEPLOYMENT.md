@@ -15,6 +15,8 @@ Both backends use the same `sentence-transformers/all-MiniLM-L6-v2` weights and
 the same prebuilt 92-chunk index. Retrieval parity was verified across 20
 questions (identical chunk IDs and scores to four decimal places).
 
+**Current live service:** https://hdfc-mf-faq-376o.onrender.com
+
 ---
 
 ## Option A — Render (free, recommended)
