@@ -1,0 +1,15 @@
+.venv/
+.git/
+.gitignore
+.env
+.pytest_cache/
+__pycache__/
+*.pyc
+tests/
+data/raw/
+data/traces/
+*.log
+
+# Keep the image lean; the runtime only needs the docs it serves.
+*.md
+!README.md

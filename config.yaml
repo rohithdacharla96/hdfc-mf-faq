@@ -1,0 +1,35 @@
+sources:
+  urls:
+    - https://groww.in/mutual-funds/amc/hdfc-mutual-funds
+    - https://groww.in/mutual-funds/hdfc-large-cap-fund-direct-growth
+    - https://groww.in/mutual-funds/hdfc-equity-fund-direct-growth
+    - https://groww.in/mutual-funds/hdfc-elss-tax-saver-fund-direct-plan-growth
+    - https://groww.in/mutual-funds/hdfc-mid-cap-fund-direct-growth
+  crawl_internal_links: false
+  timeout_seconds: 30
+  delay_seconds: 1.0
+  user_agent: "GrowwMFFAQDemo/1.0"
+
+chunking:
+  strategy: section_aware
+  # MiniLM truncates at 256 tokens (~180 words). Keep chunks below that.
+  max_words: 180
+
+embedding:
+  model: sentence-transformers/all-MiniLM-L6-v2
+  batch_size: 32
+
+vector_db:
+  path: data/chroma
+  collection: hdfc_faq
+
+retrieval:
+  top_k: 4
+  over_fetch: 12
+  min_score: 0.25
+
+llm:
+  provider: groq
+  model: ${GROQ_MODEL}
+  temperature: 0.0
+  max_tokens: 300

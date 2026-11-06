@@ -1,0 +1,13 @@
+.venv/
+__pycache__/
+*.pyc
+.env
+.pytest_cache/
+
+# Runtime data. Only the small files needed by the deployed app are tracked;
+# raw HTML, answer traces, the Chroma store, and the ONNX weights stay local.
+# Render downloads the ONNX weights at build time via scripts/fetch_model.py.
+data/*
+!data/manifest.json
+!data/chunks.jsonl
+!data/embeddings.npy

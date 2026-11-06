@@ -1,0 +1,13 @@
+{
+  "ingested_at": "2026-11-05",
+  "collection": "hdfc_faq",
+  "embedding_model": "sentence-transformers/all-MiniLM-L6-v2",
+  "count": 92,
+  "pages": [
+    "https://groww.in/mutual-funds/amc/hdfc-mutual-funds",
+    "https://groww.in/mutual-funds/hdfc-elss-tax-saver-fund-direct-plan-growth",
+    "https://groww.in/mutual-funds/hdfc-equity-fund-direct-growth",
+    "https://groww.in/mutual-funds/hdfc-large-cap-fund-direct-growth",
+    "https://groww.in/mutual-funds/hdfc-mid-cap-fund-direct-growth"
+  ]
+}

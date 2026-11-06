@@ -1,0 +1,21 @@
+services:
+  - type: web
+    name: hdfc-mf-faq
+    runtime: python
+    plan: free
+    region: oregon
+    buildCommand: pip install --upgrade pip && pip install -r requirements-render.txt && python scripts/fetch_model.py
+    startCommand: uvicorn app.main:app --host 0.0.0.0 --port $PORT --workers 1
+    healthCheckPath: /health
+    envVars:
+      - key: PYTHON_VERSION
+        value: 3.11.9
+      # ONNX MiniLM + flat NumPy index: fits the free 512 MB instance.
+      - key: RETRIEVAL_BACKEND
+        value: lite
+      - key: GROQ_MODEL
+        value: llama-3.3-70b-versatile
+      # Optional. Add this in the Render dashboard to enable LLM prose;
+      # without it the deterministic extractive fallback runs.
+      - key: GROQ_API_KEY
+        sync: false

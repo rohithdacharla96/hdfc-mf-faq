@@ -1,0 +1,20 @@
+# Lean runtime for Render's free 512 MB instance (native Python, no Docker).
+# Replaces PyTorch + sentence-transformers + ChromaDB with ONNX Runtime and a
+# flat NumPy cosine index. Retrieval parity with the full stack is exact.
+#
+# The scraper/build dependencies (httpx, beautifulsoup4, lxml, tenacity) are not
+# needed at runtime and are intentionally omitted.
+
+fastapi==0.162.0
+uvicorn==0.54.0
+pydantic==2.14.3
+PyYAML==6.0.3
+python-dotenv==1.2.4
+
+# Embeddings: same all-MiniLM-L6-v2 weights, exported to ONNX.
+onnxruntime==1.31.1
+tokenizers==0.20.3
+numpy==1.26.4
+
+# Optional LLM generation; without GROQ_API_KEY the deterministic fallback runs.
+groq==1.7.0
